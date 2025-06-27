@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --cream: #F5F5F5;
+            --light-gray: #E0E0E0;
+            --medium-gray: #9E9E9E;
+            --dark-gray: #424242;
+            --black: #212121;
+            --accent: #5C6BC0; /* Soft blue accent */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--cream);
+            color: var(--black);
+            line-height: 1.6;
+        }
+        .hero {
+            background: #212121;
+            padding: 140px 0;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 100px;
+        }
+        section {
+            padding: 4rem 2rem;
+            max-width: 100%px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--dark-gray);
+            position: relative;
+            letter-spacing: 2px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            background-color: var(--medium-gray);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .thumbnail-container {
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .thumbnail-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .thumbnail {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .thumbnail-container:hover .thumbnail {
+            transform: scale(1.03);
+        }
+    .social-icons img {
+      transition: transform 0.3s ease;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    </style>
+</head>
+<body>
+    <section id="home" class="hero">
+        <div class="container">
+            <div>
+                <div class="logo">EAGLE BEATS</div>
+                <div class="tagline">Wellcome To My Playground</div>
+
+                <div class="d-flex flex-wrap justify-content-center">
+                        <li><a href="#thumbnail" class="btn btn-outline-light m-2">Thumbnails</a></li>
+                        <li><a href="#poster" class="btn btn-outline-light m-2">Posters</a></li>
+                        <li><a href="#calligraphy" class="btn btn-outline-light m-2">Calligraphy</a></li>
+                        <li><a href="#logo" class="btn btn-outline-light m-2">Logos</a></li>
+                        <li><a href="#card" class="btn btn-outline-light m-2">Cards</a></li>
+                        <li><a href="#Branding" class="btn btn-outline-light m-2">Branding</a></li>
+                        <li><a href="#about" class="btn btn-outline-light m-2">About</a></li>
+                        <li><a href="#home" class="btn btn-outline-light m-2">Home</a></li>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="py-5 bg-white" id="bio">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Meet the Designer</h2>
+    <div class="row align-items-center">
+      <!-- Left Column -->
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+        <h4 class="fw-bold text-uppercase text-primary">Eagle_Beats</h4>
+        <p>Hi there! I'm a Graphic Designer based in Nagpur, Maharashtra, India. I have 4 years of freelance experience in this field.</p>
+        <p>I enjoy photo editing (concept manipulations), calligraphy, typography, and music. I’m passionate about personal design projects too.</p>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-6 text-center" data-aos="fade-left">
+        <h5 class="fw-bold text-secondary">Softwares</h5>
+        <div class="d-flex justify-content-center flex-wrap gap-3 my-3">
+          <img src="images/photoshop.png" alt="Photoshop" width="45" />
+          <img src="images/aftereffects.png" alt="After Effects" width="45" />
+          <img src="images/illustrator.png" alt="Illustrator" width="45" />
+          <img src="images/premierepro.png" alt="Premiere Pro" width="45" />
+        </div>
+
+        <h5 class="fw-bold text-secondary mt-4">Skills</h5>
+        <div class="row text-start justify-content-center">
+          <div class="col-6 col-md-6">
+            <ul class="list-unstyled">
+              <li>🎨 Poster Campaign</li>
+              <li>🎯 Branding</li>
+              <li>📱 Social Media Design</li>
+              <li>🖼️ Thumbnails</li>
+              <li>📃 Posters</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-6">
+            <ul class="list-unstyled">
+              <li>✍️ Calligraphy</li>
+              <li>🔤 Typography</li>
+              <li>🌀 Logos</li>
+              <li>💳 Cards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="py-5 bg-light" id="thumbnail">
+    <div class="container">
+        <div class="text-center mb-4">
+        <h2 class="fw-bold">Thumbnail </h2>
+        </div>
+        <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="images/Thumbnail.jpg" alt="Farmers working" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <p>FarmerInfo is a dedicated platform built to empower farmers with practical agricultural knowledge, crop-specific guides, and sustainable techniques.</p>
+            <p>From organic farming to pest control, weather updates to government schemes — we bring essential farming content all in one place.</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+        <section class="py-5 bg-light" id="poster">
+    <div class="container">
+        <div class="text-center mb-4">
+        <h2 class="fw-bold">Poster</h2>
+        </div>
+        <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>FarmerInfo is a dedicated platform built to empower farmers with practical agricultural knowledge, crop-specific guides, and sustainable techniques.</p>
+            <p>From organic farming to pest control, weather updates to government schemes — we bring essential farming content all in one place.</p>
+        </div>
+        <div class="col-md-6  mt-4 mt-md-0">
+            <img src="images/Poster.jpg" alt="Farmers working" class="img-fluid rounded shadow">
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <section class="py-5 bg-light" id="logo">
+    <div class="container">
+        <div class="text-center mb-4">
+        <h2 class="fw-bold">Logo</h2>
+        </div>
+        <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="images/logo.jpg" alt="Farmers working" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+            <p>FarmerInfo is a dedicated platform built to empower farmers with practical agricultural knowledge, crop-specific guides, and sustainable techniques.</p>
+            <p>From organic farming to pest control, weather updates to government schemes — we bring essential farming content all in one place.</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+        <section class="py-5 bg-light" id="calligraphy">
+    <div class="container">
+        <div class="text-center mb-4">
+        <h2 class="fw-bold">Calligraphy</h2>
+        </div>
+        <div class="row align-items-center">
+        <div class="col-md-6">
+            <p>FarmerInfo is a dedicated platform built to empower farmers with practical agricultural knowledge, crop-specific guides, and sustainable techniques.</p>
+            <p>From organic farming to pest control, weather updates to government schemes — we bring essential farming content all in one place.</p>
+        </div>
+        <div class="col-md-6  mt-4 mt-md-0">
+            <img src="images/calligraphy.jpg" alt="Farmers working" class="img-fluid rounded shadow">
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <section class="py-5 bg-light" id="card">
+    <div class="container">
+        <div class="text-center mb-4">
+        <h2 class="fw-bold">Cards</h2>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="images/wcard.jpg" alt="Farmers working" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <p>FarmerInfo is a dedicated platform built to empower farmers with practical agricultural knowledge, crop-specific guides, and sustainable techniques.</p>
+                <p>From organic farming to pest control, weather updates to government schemes — we bring essential farming content all in one place.</p>
+            </div>
+            <div class="row align-items-center">
+            <div class="col-md-6">
+                <p>FarmerInfo is a dedicated platform built to empower farmers with practical agricultural knowledge, crop-specific guides, and sustainable techniques.</p>
+                <p>From organic farming to pest control, weather updates to government schemes — we bring essential farming content all in one place.</p>
+            </div>
+            <div class="col-md-6  mt-4 mt-md-0">
+                <img src="images/Visiting.jpg" alt="Farmers working" class="img-fluid rounded shadow">
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="py-5 bg-light" id="Branding">
+    <div class="container">
+        <div class="text-center mb-4">
+        <h2 class="fw-bold">Branding</h2>
+        </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>FarmerInfo is a dedicated platform built to empower farmers with practical agricultural knowledge, crop-specific guides, and sustainable techniques.</p>
+                    <p>From organic farming to pest control, weather updates to government schemes — we bring essential farming content all in one place.</p>
+                </div>
+                <div class="col-md-6  mt-4 mt-md-0">
+                    <img src="images/cbrand.jpg" alt="Farmers working" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/Mbrand.jpg" alt="Farmers working" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <p>FarmerInfo is a dedicated platform built to empower farmers with practical agricultural knowledge, crop-specific guides, and sustainable techniques.</p>
+                    <p>From organic farming to pest control, weather updates to government schemes — we bring essential farming content all in one place.</p>
+                </div>
+            </div>
+            </div>
+    </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div>
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled d-flex gap-3 mb-0">
+          <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+          </ul>
+      </div>
+      <div class="text-center text-md-end">
+        <p class="mb-1">Email: Eagle_Beats@gmail.com</p>
+        <p class="mb-1">Managed By: Eagle_Beats</p>
+        <div class="social-icons d-flex justify-content-center justify-content-md-end gap-3">
+          <a href="https://www.instagram.com/eagle_beats_visual" target="_blank">
+            <img src="Images/instagram.png" alt="Instagram" width="32" />
+          </a>
+          <a href="https://www.youtube.com/@GrooveMarathiOfficial" target="_blank">
+            <img src="Images/youtube.png" alt="YouTube" width="32" />
+          </a>
+          <a href="https://t.me/groovemarathi" target="_blank">
+            <img src="Images/telegram.png" alt="Telegram" width="32" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-3">&copy; 2025  Eagle_Beats. All Rights Reserved.</div>
+  </footer>
+<!-- AOS Animation Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
